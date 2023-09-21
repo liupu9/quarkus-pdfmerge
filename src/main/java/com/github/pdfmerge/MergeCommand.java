@@ -1,18 +1,16 @@
 package com.github.pdfmerge;
 
 import io.quarkus.logging.Log;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.UncheckedIOException;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.stream.Collectors;
 import org.apache.pdfbox.io.MemoryUsageSetting;
 import org.apache.pdfbox.multipdf.PDFMergerUtility;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
+
+import java.io.IOException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.concurrent.Callable;
 
 @Command(mixinStandardHelpOptions = true)
 public class MergeCommand implements Callable<Integer> {
